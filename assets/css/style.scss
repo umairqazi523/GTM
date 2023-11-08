@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+a {
+    // text-decoration: none;
+    color: inherit;
+}
+
+.selected {
+    outline: 2px solid #222;
+    outline-offset: 4px;
+}
+
+.form-control {
+    height: 56px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px;
+    border: 1px solid #222;
+    border-radius: 6px;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button {
+    display: inline-block;
+    vertical-align: middle;
+    box-shadow: none;
+    border: none;
+    padding: 10px 16px;
+    background-color: #7B1E7A;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 16px;
+    -webkit-appearance: none;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.3s all ease;
+
+    &:hover {
+        background-color: #af36ad;
+    }
+
+    &.white {
+        color: #7B1E7A;
+        background-color: #fff;
+
+        &:hover {
+            color: #af36ad;
+            background-color: #fff;
+        }
+    }
+}
+
+.site-header {
+    padding: 10px;
+    background-color: #7B1E7A;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 10;
+    top: 0;
+
+    &__inner {
+        display: flex;
+
+        .button {
+            margin-left: auto;
+        }
+    }
+}
+
+.selection-log {
+    position: fixed;
+    top: 65px;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    background-color: #ccc;
+    padding: 30px;
+    transform: translateX(-100%);
+    transition: 0.3s all ease;
+
+    &__toggler {
+        position: absolute;
+        left: 100%;
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        border: none;
+        outline: none !important;
+        overflow: hidden;
+        transition: 0.2s all ease;
+        padding-left: 10px;
+        z-index: 2;
+        box-shadow: none !important;
+        border-radius: 0 10px 10px 0;
+        background-color: #ccc;
+        color: #7B1E7A;
+        // margin-right: -16px;
+
+        svg {
+            cursor: pointer;
+            transform: translate3d(-12px, 0px, 0) scale(1.4);
+            width: 47px;
+            height: 47px;
+
+            path {
+                fill: none;
+                transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+                stroke-width: 22px;
+                stroke-linecap: round;
+                stroke: currentColor;
+                stroke-dashoffset: 0px;
+
+                &#top,
+                &#bottom {
+                    stroke-dasharray: 240px 950px;
+                }
+
+                &#middle {
+                    stroke-dasharray: 240px 240px;
+                }
+            }
+        }
+
+        &[aria-expanded="true"] {
+            svg {
+                path {
+
+                    &#top,
+                    &#bottom {
+                        stroke-dashoffset: -650px;
+                        stroke-dashoffset: -650px;
+                    }
+
+                    &#middle {
+                        stroke-dashoffset: -115px;
+                        stroke-dasharray: 1px 220px;
+                    }
+                }
+            }
+        }
+    }
+
+    &.show {
+        transform: translateX(0);
+    }
+}
+
+.hero {
+    padding: 100px 0;
+
+    .hero-caption {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -15px;
+        margin-right: -15px;
+
+        .col-left,
+        .col-right {
+            width: 100%;
+            max-width: 50%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    .video-wrapper {
+        height: 100%;
+
+        video {
+            width: 100%;
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+        }
+    }
+
+    h1 {
+        margin-bottom: 24px;
+        font-size: 40px;
+    }
+
+    form {
+        margin-top: 24px;
+    }
+
+    .btn-wrapper {
+        margin-top: 24px;
+    }
+}
+
+.product-qualities {
+    padding: 50px 0;
+    text-align: center;
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    &__col {
+        width: 100%;
+        max-width: 33.3%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .btn-wrapper {
+        margin-top: 24px;
+    }
+}

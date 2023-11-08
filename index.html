@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="site-header__inner">
+                <button class="button white" id="buttonToggleMode">Toggle Selection Mode</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <aside class="selection-log show">
+            <div class="selection-log__toggler" aria-expanded="true">
+                <svg viewBox="0 0 800 600">
+                    <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200"
+                        id="top"></path>
+                    <path d="M300,320 L540,320" id="middle"></path>
+                    <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190"
+                        id="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
+                </svg>
+            </div>
+            <div id="selectedElementsList"class="selection-log__list"></div>
+        </aside>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-caption">
+                    <div class="col-left">
+                        <div class="video-wrapper">
+                            <video loop="" autoplay="" muted="" playsinline="">
+                                <source
+                                    src="https://assets.mixkit.co/videos/preview/mixkit-flying-through-the-clouds-with-the-radiant-sun-14171-large.mp4"
+                                    data-wf-ignore="true">
+                            </video>
+                        </div>
+                    </div>
+                    <div class="col-right">
+                        <h1>Product Title</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, rerum ullam architecto a
+                            accusantium ipsam maxime placeat cupiditate aliquam, minima quod culpa cum ex magnam
+                            consequatur molestias minus rem dolorum. <a href="#">Read More</a></p>
+
+                        <form action="">
+                            <select name="" id="" class="form-control">
+                                <option value="">Select Size</option>
+                                <option value="0">Large</option>
+                                <option value="0">Medium</option>
+                                <option value="0">Small</option>
+                            </select>
+                        </form>
+
+                        <div class="btn-wrapper">
+                            <a href="#" class="button">Visit Our Store</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="product-qualities">
+            <div class="container">
+                <div class="product-qualities__row">
+                    <div class="product-qualities__col">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quaerat saepe doloribus
+                            accusantium quisquam blanditiis laudantium unde dolor consequatur, placeat deserunt modi
+                            nisi incidunt ea nemo labore officia repudiandae! Perspiciatis?</p>
+                        <div class="btn-wrapper">
+                            <button class="button">Subscribe</button>
+                        </div>
+                    </div>
+                    <div class="product-qualities__col">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quaerat saepe doloribus
+                            accusantium quisquam blanditiis laudantium unde dolor consequatur, placeat deserunt modi
+                            nisi incidunt ea nemo labore officia repudiandae! Perspiciatis?</p>
+                        <div class="btn-wrapper">
+                            <button class="button">Download</button>
+                        </div>
+                    </div>
+                    <div class="product-qualities__col">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quaerat saepe doloribus
+                            accusantium quisquam blanditiis laudantium unde dolor consequatur, placeat deserunt modi
+                            nisi incidunt ea nemo labore officia repudiandae! Perspiciatis?</p>
+                        <div class="btn-wrapper">
+                            <button class="button">Contact Us</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+    </footer>
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>
